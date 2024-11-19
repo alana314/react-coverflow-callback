@@ -16,6 +16,7 @@ render(
     displayQuantityOfSide={2}
     navigation={false}
     enableHeading={false}
+    onChange={(active) => console.log('onChange', active)}
   >
     <div onClick={() => fn()} onKeyDown={() => fn()} role="menuitem" tabIndex="0">
       <img src="images/album-1.png" alt="Album one" style={{ display: 'block', width: '100%' }} />

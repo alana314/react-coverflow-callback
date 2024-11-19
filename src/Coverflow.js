@@ -50,6 +50,7 @@ class Coverflow extends Component {
     infiniteScroll: PropTypes.bool,
     width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    onChange: PropTypes.func,
   };
 
   static defaultProps = {
@@ -66,6 +67,7 @@ class Coverflow extends Component {
     infiniteScroll: false,
     width: 'auto',
     height: 'auto',
+    onChange: () => {},
   };
 
   state = {
@@ -130,7 +132,7 @@ class Coverflow extends Component {
       activeImg = ~~active;
       let move = 0;
       move = baseWidth * (center - activeImg);
-
+      this.props.onChange(active)
       state = Object.assign({}, state, {
         current: active,
         move,
@@ -281,6 +283,7 @@ class Coverflow extends Component {
       const distance = this._center() - index;
       const move = distance * baseWidth;
       this.setState({ current: index, move });
+      this.props.onChange(index)
     }
   };
 
@@ -327,6 +330,7 @@ class Coverflow extends Component {
 
     if (current - 1 >= 0) {
       this.setState({ current: current - 1, move });
+      this.props.onChange(current)
       TOUCH.lastMove = move;
     }
     if (current - 1 < 0 && infiniteScroll) {
@@ -345,10 +349,12 @@ class Coverflow extends Component {
 
     if (current + 1 < this.props.children.length) {
       this.setState({ current: current + 1, move });
+      this.props.onChange(current)
       TOUCH.lastMove = move;
     }
     if (current + 1 >= this.props.children.length && infiniteScroll) {
       this.setState({ current: 0, move });
+      this.props.onChange(current)
       TOUCH.lastMove = move;
     }
   };
