@@ -1,7 +1,7 @@
 React Coverflow
 ===
 Fork of React Coverflow with an onChange event.  
-[]https://github.com/andyyou/react-coverflow  
+https://github.com/andyyou/react-coverflow  
 
 Usage:  
 ```
