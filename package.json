@@ -1,6 +1,6 @@
 {
     "name": "react-coverflow-callback",
-    "version": "0.2.21",
+    "version": "0.2.22",
     "description": "Carousel of coverflow effect with callbacks",
     "main": "dist/react-coverflow-callback.js",
     "repository": {
