@@ -1,1 +1,1 @@
-module.exports = require('./dist/react-coverflow');
+module.exports = require('./dist/react-coverflow-callback');
