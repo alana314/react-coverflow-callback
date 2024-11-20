@@ -387,7 +387,7 @@ class Coverflow extends Component {
   }
 
   _handleTouchMove(e) {
-    e.preventDefault();
+    // e.preventDefault();
     const { displayQuantityOfSide } = this.props;
     const { width } = this.state;
 
