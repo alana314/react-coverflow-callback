@@ -24,7 +24,7 @@ const plugins = [
 const entry = {};
 const mainEntryPoints = glob.sync(path.join(__dirname, './src/*.js'));
 
-entry['react-coverflow'] = mainEntryPoints;
+entry['react-coverflow-callback'] = mainEntryPoints;
 
 module.exports = {
   mode: 'production',
