@@ -6,7 +6,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const entry = {};
 const mainEntryPoints = glob.sync(path.join(__dirname, './src/*.js'));
 
-entry['react--callback'] = mainEntryPoints;
+entry['react-coverflow-callback'] = mainEntryPoints;
 
 module.exports = {
   entry,
