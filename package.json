@@ -2,7 +2,7 @@
     "name": "react-coverflow-callback",
     "version": "0.2.21",
     "description": "Carousel of coverflow effect with callbacks",
-    "main": "main.js",
+    "main": "dist/react-coverflow-callback.js",
     "repository": {
         "type": "git",
         "url": "https://github.com/alana314/react-coverflow-callback"
