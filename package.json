@@ -43,7 +43,7 @@
     },
     "peerDependencies": {
         "prop-types": "^15.6.2",
-        "react": "^16.5.2"
+        "react": "^18.2.0"
     },
     "url": "https://github.com/alana314/react-coverflow-callback",
     "devDependencies": {
@@ -72,13 +72,13 @@
         "glob": "^7.1.3",
         "html-webpack-plugin": "^3.2.0",
         "mocha": "^5.2.0",
-        "sass": "^4.9.3",
         "postcss-load-config": "^2.0.0",
         "postcss-loader": "^3.0.0",
         "prop-types": "^15.6.2",
-        "react": "^16.5.2",
-        "react-dom": "^16.5.2",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
         "react-hot-loader": "^4.3.11",
+        "sass": "^1.18.0",
         "sass-loader": "^7.0.3",
         "style-loader": "^0.23.0",
         "uglifyjs-webpack-plugin": "^2.0.1",
