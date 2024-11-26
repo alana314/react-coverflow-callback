@@ -99,7 +99,6 @@ class Coverflow extends Component {
     componentDidMount() {
         this.updateDimensions(this.props.active)
         const length = React.Children.count(this.props.children)
-        console.log("Coverflow mount")
 
         TRANSITIONS.forEach((event) => {
             for (let i = 0; i < length; i++) {
@@ -127,7 +126,6 @@ class Coverflow extends Component {
     }
 
     componentWillUnmount() {
-        console.log("react bin test")
         const length = React.Children.count(this.props.children)
 
         TRANSITIONS.forEach((event) => {
@@ -163,7 +161,6 @@ class Coverflow extends Component {
             activeImg = ~~active
             let move = 0
             move = baseWidth * (center - activeImg)
-            console.log("updateDimensions")
             this.props.onChange(active)
             state = Object.assign({}, state, {
                 current: active,
@@ -338,7 +335,6 @@ class Coverflow extends Component {
             const distance = this._center() - index
             const move = distance * baseWidth
             this.setState({ current: index, move })
-            console.log("handleFigureClick")
             this.props.onChange(index)
         }
     }
@@ -402,7 +398,6 @@ class Coverflow extends Component {
 
         if (current - 1 >= 0) {
             this.setState({ current: current - 1, move })
-            console.log("handlePrefFigure")
             this.props.onChange(current - 1)
             TOUCH.lastMove = move
         }
@@ -425,13 +420,11 @@ class Coverflow extends Component {
 
         if (current + 1 < this.props.children.length) {
             this.setState({ current: current + 1, move })
-            console.log("handleNextFigure")
             this.props.onChange(current + 1)
             TOUCH.lastMove = move
         }
         if (current + 1 >= this.props.children.length && infiniteScroll) {
             this.setState({ current: 0, move })
-            console.log("handleNextFigure infinite")
             this.props.onChange(0)
             TOUCH.lastMove = move
         }
